@@ -98,13 +98,33 @@ nav {
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Ajouté pour espacer les éléments */
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding: 0 5%;
-    margin-top: 60px; 
+    margin-top: 60px;
+    gap: 40px; /* Espace entre le texte et l'image */
 }
 
 .hero-content {
     max-width: 600px;
+    flex: 1; /* Permet au contenu de prendre l'espace disponible */
+}
+
+.hero-image {
+    flex: 1; /* Donne le même poids à l'image */
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 10px; /* Optionnel */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Optionnel */
 }
 
 .hero h1 {
@@ -126,6 +146,35 @@ nav {
     background-color: #2980b9;
 }
 
+/* Responsive pour tablettes */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .hero-content {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-image {
+        max-width: 400px;
+    }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-image {
+        max-width: 300px;
+    }
+}
 /* Section Compétences */
 
 .skills {
