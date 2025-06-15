@@ -40,29 +40,30 @@ function fetchProjects() {
 
     const projects = [
         {
-            title: "Mini-jeu interactif en JavaScript",
-            description: "Un mini-jeu interactif en JavaScript qui utilise des événements DOM.",
-            tags: ["#html", "#css", "#js"],
+            title: "Application de gestion d'école",
+            description: "Application de gestion d'etablissement scolaire moderne utilisant une API de fullcalendar pour la gestions des evements et emplois du temps.",
+            tags: ["#HTML","#Boostrap","#javascript", "#api", "#ajax","#laravel", "#SQL"],
+            link: "https://insetgroup.tn/"
+        },
+        {
+            title: "HomeFit Shop",
+            description: "Application de vente en ligne d'équipement de sport (fitness)",
+            tags: ["#html", "#Boostrap", "#js",'php','sql'],
             link: "#"
         },
         {
             title: "Site vitrine responsive Best Visuel",
             description: "Un site vitrine moderne avec design responsive pour une entreprise conception et modelisation de rendu 3D.",
-            tags: ["#html", "#css", "#javascript"],
+            tags: ["#wordpress", "#Elementor"],
             link: "#"
         },
         {
             title: "Application météo",
-            description: "Application utilisant une API météo pour afficher les prévisions.",
-            tags: ["#javascript", "#api", "#async"],
-            link: "#"
-        },
-        {
-            title: "Application de gestion d'école",
-            description: "Application de gestion d'etablissement scolaire moderne utilisant une API de fullcalendar pour la gestions des evements et emplois du temps.",
-            tags: ["#javascript", "#api", "#ajax","#php"],
+            description: "Application utilisant une API météo pour afficher la météo de toutes les villes du monde.",
+            tags: ["#HTML","#Css","#javascript", "#api", "#async"],
             link: "#"
         }
+       
     ];
 
     const projectsGrid = document.querySelector('.projects-grid');
