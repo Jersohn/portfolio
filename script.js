@@ -35,35 +35,32 @@ document.addEventListener('DOMContentLoaded', function() {
         fetchProjects();
     }
 });
-
 function fetchProjects() {
-
     const projects = [
         {
+            id: "school-management",
             title: "Application de gestion d'école",
             description: "Application de gestion d'etablissement scolaire moderne utilisant une API de fullcalendar pour la gestions des evements et emplois du temps.",
             tags: ["#HTML","#Boostrap","#javascript", "#api", "#ajax","#laravel", "#SQL"],
-            link: "https://insetgroup.tn/"
+            demoLink: "https://insetgroup.tn/",
+            detailLink: "projet_inset.html" 
         },
         {
+            
             title: "HomeFit Shop",
             description: "Application de vente en ligne d'équipement de sport (fitness)",
             tags: ["#html", "#Boostrap", "#js",'php','sql'],
-            link: "#"
+            demoLink: "#",
+            detailLink: "projet_homefit.html" 
         },
         {
-            title: "Site vitrine responsive Best Visuel",
-            description: "Un site vitrine moderne avec design responsive pour une entreprise conception et modelisation de rendu 3D.",
-            tags: ["#wordpress", "#Elementor"],
-            link: "#"
-        },
-        {
+            id: "weather-app",
             title: "Application météo",
             description: "Application utilisant une API météo pour afficher la météo de toutes les villes du monde.",
             tags: ["#HTML","#Css","#javascript", "#api", "#async"],
-            link: "#"
+            demoLink: "#",
+            detailLink: "projet_meteo.html" 
         }
-       
     ];
 
     const projectsGrid = document.querySelector('.projects-grid');
@@ -78,7 +75,10 @@ function fetchProjects() {
             <div class="tags">
                 ${project.tags.map(tag => `<span>${tag}</span>`).join('')}
             </div>
-            <a href="${project.link}" class="btn">Voir</a>
+            <div class="project-links">
+                <a href="${project.detailLink}" class="btn">Détails du projet</a>
+                ${project.demoLink !== '#' ? `<a href="${project.demoLink}" target="_blank" class="btn btn-secondary">Voir la démo</a>` : ''}
+            </div>
         `;
         
         projectsGrid.appendChild(projectCard);
